@@ -1,9 +1,10 @@
 # g2g
 
 Simple Gitea hook / service who mirroring all your Gitea repo to Github (with git push --mirror). <br>
-*Tested only on Alpine-Linux with Gitea server.*
+*Tested only on Alpine-Linux with Gitea server.* <br>
 *The script requires bash, jq, curl, grep and git.*
 
+<br>
 
 This should be easily adapted to other distributions without too many modifications, it should certainly be necessary to modify the location where the cronjob is installed (/etc/periodic/15min) for Debian/Arch/... based system.
 
