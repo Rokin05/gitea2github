@@ -43,6 +43,7 @@ If a Github repo already exists with the same name as a Gitea repo but with diff
 ```shell
 apk add bash jq curl grep
 wget "https://git.rokin.in/Rokin/gitea2github/raw/branch/master/g2g.sh"
+# * edit the file with your infos *
 cp -f g2g.sh /usr/bin/g2g
 chown root:root /usr/bin/g2g
 chmod 755 /usr/bin/g2g
