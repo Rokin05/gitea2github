@@ -1,6 +1,7 @@
 # g2g
 
 Simple Gitea hook / service who mirroring all your Gitea repo to Github (with git push --mirror).
+
 *Tested only on Alpine-Linux with Gitea server.*
 
 
@@ -14,7 +15,7 @@ This should be easily adapted to other distributions without too many modificati
 If a Github repo already exists with the same name as a Gitea repo but with different content, the whole Github repository will be overwritten !**
 
 
-
+<br>
 
 ### How the hook is triggered :
 
@@ -37,11 +38,10 @@ If a Github repo already exists with the same name as a Gitea repo but with diff
 
 *(The creation of Github repositories and the retrieval of information from Gitea repositories is done through the official API with curl).*
 
-
-
+<br>
 
 #### Install 
-```
+```shell
 apk add bash jq curl grep
 wget "https://git.rokin.in/Rokin/gitea2github/raw/branch/master/g2g.sh"
 cp -f g2g.sh /usr/bin/g2g
@@ -51,18 +51,18 @@ g2g service install
 ```
 
 #### Uninstall 
-```
+```shell
 g2g hook uninstall
 g2g service uninstall
 rm -f /usr/bin/g2g
 ```
 
 #### Usage 
-```
-Manual push (single repo): 
+```shell
+#Manual push (single repo): 
 g2g mirror <repo_name>
 
-Manual push (all repo): 
+#Manual push (all repo): 
 /etc/periodic/15min/github_mirror_sync
 
 ```
