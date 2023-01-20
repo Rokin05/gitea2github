@@ -42,6 +42,7 @@ If a Github repo already exists with the same name as a Gitea repo but with diff
 #### Install 
 ```shell
 apk add bash jq curl grep
+git config --system --add safe.directory '*'
 wget "https://git.rokin.in/Rokin/gitea2github/raw/branch/master/g2g.sh"
 # * edit the file with your infos *
 cp -f g2g.sh /usr/bin/g2g
